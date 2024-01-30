@@ -30,12 +30,8 @@
         <div class="row justify-content-center">
           <div class="col-md-8 col-lg-6 col-xl-5">
             <div class="text-center mb-4">
-              <a href="index.html" class="auth-logo mb-5 d-block">
-                <img src="https://themesbrand.com/chatvia/layouts/assets/images/logo.svg" alt="webui" />
-                <h1 class="auth-logo mb-5 d-block text-center mb-4 fw-medium text-primary">
-                  Webui
-                </h1>
-              </a>
+              
+              
               <h4>Sign up</h4>
               <p class="text-muted mb-4">Get your Webui account now.</p>
             </div>
@@ -43,7 +39,7 @@
             <div class="card">
               <div class="card-body p-4">
                 <div class="p-3">
-                  <form action="index.html">
+                  <form action="./">
                     <div class="mb-3">
                       <label class="form-label">Email</label>
                       <div class="input-group bg-light-subtle rounded-3 mb-3">
