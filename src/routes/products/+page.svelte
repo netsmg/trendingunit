@@ -1,3 +1,11 @@
+	<link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" href="./css/magnific-popup.css">
+	<link rel="stylesheet" href="./css/nouislider.min.css">
+	<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="./css/paymentfont.min.css">
+	<link rel="stylesheet" href="./css/main (1).css">
 	<!-- section -->
 	<section class="section section--first section--carousel section--bg" data-bg="img/bg.jpg">
 		<div class="container">
