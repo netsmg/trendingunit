@@ -1,20 +1,16 @@
 <script>
-  import { navigate } from "svelte-routing";
-
   let password = "";
 
   function unlockScreen() {
     if (password === "123456") {
       // Redirect to homepage if password matches
-      navigate("/");
+      window.location.href = "/"; // Change the path accordingly
     } else {
       // Handle incorrect password logic here
       console.log("Incorrect password. Please try again.");
     }
   }
 </script>
-
-
 
 
 <div class="account-pages my-5 pt-sm-5">
