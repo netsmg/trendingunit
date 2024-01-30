@@ -32,7 +32,12 @@
 		</svg>
 	</nav>
 
-	
+	<div class="corner">
+<a href="/">
+			<img src={logo} alt="Webui" />
+		</a>
+		
+	</div>
 </header>
 
 <style>
