@@ -35,9 +35,7 @@
 								<span></span>
 							</button>
 
-							<a href="/" class="header__logo">
-								<img src="https://trendingunit.vercel.app/logo.svg"/>
-							</a>
+							
 
 							<ul class="header__nav">
 								<li class="header__nav-item">
