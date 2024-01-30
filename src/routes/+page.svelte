@@ -9,10 +9,8 @@
     <title>Log in | Webui</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="Responsive Bootstrap 5 Chat App" name="description" />
-    <meta content="Themesbrand" name="author" />
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" />
-    <!-- Bootstrap Css -->
+    <meta content="Netsmg" name="author" />
+    
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css"
       rel="stylesheet"
