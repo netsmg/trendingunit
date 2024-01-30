@@ -62,7 +62,7 @@
 
                     <div class="mb-4">
                       <div class="float-end">
-                        <a href="auth-recoverpw.html" class="text-muted font-size-13">
+                        <a href="./auth-recover" class="text-muted font-size-13">
                           Forgot password?
                         </a>
                       </div>
