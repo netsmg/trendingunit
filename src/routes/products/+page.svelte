@@ -253,7 +253,7 @@
 						<h2 class="section__title">Latest releases</h2>
 
 						<div class="section__nav-wrap">
-							<a href="catalog.html" class="section__view">View All</a>
+							<a href="/" class="section__view">View All</a>
 
 							<button class="section__nav section__nav--prev" type="button" data-nav="#carousel1">
 								<svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><polyline points='328 112 184 256 328 400' style='fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px'/></svg>
@@ -273,13 +273,13 @@
 		<div class="owl-carousel section__carousel section__carousel--catalog" id="carousel1">
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/5.jpg" alt="">
 					<span class="card__rate"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg> 4.8</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">FlixGo – Online Movies, TV Shows & Cinema HTML Template</a></h3>
+					<h3><a href="/">FlixGo – Online Movies, TV Shows & Cinema HTML Template</a></h3>
 					<span>$49.00</span>
 				</div>
 
@@ -295,13 +295,13 @@
 
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/7.jpg" alt="">
 					<span class="card__rate"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg> 4.6</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">Business Card Presentation Mockup</a></h3>
+					<h3><a href="/">Business Card Presentation Mockup</a></h3>
 					<span>$34.99 <s>$49.99</s></span>
 				</div>
 
@@ -317,13 +317,13 @@
 
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/1.jpg" alt="">
 					<span class="card__rate"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg> 5.0</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">Magazine Showcase Mockup</a></h3>
+					<h3><a href="/">Magazine Showcase Mockup</a></h3>
 					<span>$7.99 <s>$19.99</s></span>
 				</div>
 
