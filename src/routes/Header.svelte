@@ -1,14 +1,15 @@
 <script>
 	import { page } from '$app/stores';
-	
+	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 </script>
 
 <header>
 	<div class="corner">
-		<a href="/">
-			<img src="./logo.svg" alt="Webui" />
+<a href="/">
+			<img src={logo} alt="Webui" />
 		</a>
+		
 	</div>
 
 	<nav>
