@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="./css/nouislider.min.css">
 	<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css">
 	<link rel="stylesheet" href="./css/paymentfont.min.css">
-	<link rel="stylesheet" href="./css/main(1).css">
+	<link rel="stylesheet" href="./css/main (1).css">
 	
 	<meta name="description" content="">
 	<meta name="keywords" content="">
