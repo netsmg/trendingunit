@@ -54,14 +54,14 @@
 		<div class="owl-carousel section__carousel section__carousel--big" id="carousel0">
 			<!-- big card -->
 			<div class="card card--big">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/5.jpg" alt="">
 					<span class="card__rate"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg> 5.0</span>
 				</a>
 
 				<div class="card__wrap">
 					<div class="card__title">
-						<h3><a href="details.html">FlixGo – Online Movies, TV Shows & Cinema HTML Template</a></h3>
+						<h3><a href="/">FlixGo – Online Movies, TV Shows & Cinema HTML Template</a></h3>
 					</div>
 
 					<div class="card__price">
@@ -81,14 +81,14 @@
 
 			<!-- big card -->
 			<div class="card card--big">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/4.jpg" alt="">
 					<span class="card__rate"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg> 4.7</span>
 				</a>
 
 				<div class="card__wrap">
 					<div class="card__title">
-						<h3><a href="details.html">Coffee Paper Cups Mockup</a></h3>
+						<h3><a href="/">Coffee Paper Cups Mockup</a></h3>
 					</div>
 
 					<div class="card__price">
@@ -108,14 +108,14 @@
 
 			<!-- big card -->
 			<div class="card card--big">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/2.jpg" alt="">
 					<span class="card__rate"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg> 5.0</span>
 				</a>
 
 				<div class="card__wrap">
 					<div class="card__title">
-						<h3><a href="details.html">FlixHub – Digital marketplace HTML Template</a></h3>
+						<h3><a href="/">FlixHub – Digital marketplace HTML Template</a></h3>
 					</div>
 
 					<div class="card__price">
@@ -135,14 +135,14 @@
 
 			<!-- big card -->
 			<div class="card card--big">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/9.jpg" alt="">
 					<span class="card__rate"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg> 4.9</span>
 				</a>
 
 				<div class="card__wrap">
 					<div class="card__title">
-						<h3><a href="details.html">Beer Bottle with Labels Mockup</a></h3>
+						<h3><a href="/">Beer Bottle with Labels Mockup</a></h3>
 					</div>
 
 					<div class="card__price">
@@ -174,7 +174,7 @@
 						<h2 class="section__title">Latest releases</h2>
 
 						<div class="section__nav-wrap">
-							<a href="catalog.html" class="section__view">View All</a>
+							<a href="/" class="section__view">View All</a>
 
 							<button class="section__nav section__nav--prev" type="button" data-nav="#carousel1">
 								<svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><polyline points='328 112 184 256 328 400' style='fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px'/></svg>
@@ -194,13 +194,13 @@
 		<div class="owl-carousel section__carousel section__carousel--catalog" id="carousel1">
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/5.jpg" alt="">
 					<span class="card__rate"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg> 4.9</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">FlixGo – Online Movies, TV Shows & Cinema HTML Template</a></h3>
+					<h3><a href="/">FlixGo – Online Movies, TV Shows & Cinema HTML Template</a></h3>
 					<span>$49.00</span>
 				</div>
 
@@ -216,14 +216,14 @@
 
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/7.jpg" alt="">
 
 					<span class="card__rate"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg> 4.3</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">Business Card Presentation Mockup</a></h3>
+					<h3><a href="/">Business Card Presentation Mockup</a></h3>
 					<span>$34.99 <s>$49.99</s></span>
 				</div>
 
@@ -239,13 +239,13 @@
 
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/1.jpg" alt="">
 					<span class="card__rate"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg> 4.1</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">Magazine Showcase Mockup</a></h3>
+					<h3><a href="/">Magazine Showcase Mockup</a></h3>
 					<span>$7.99 <s>$19.99</s></span>
 				</div>
 
@@ -261,13 +261,13 @@
 
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/3.jpg" alt="">
 					<span class="card__rate"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg> 5.0</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">Coffee Paper Cup Mockup</a></h3>
+					<h3><a href="/">Coffee Paper Cup Mockup</a></h3>
 					<span>$19.00</span>
 				</div>
 
@@ -283,13 +283,13 @@
 
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/8.jpg" alt="">
 					<span class="card__rate"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg> 4.8</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">Open Magazine with Shadows Mockup</a></h3>
+					<h3><a href="/">Open Magazine with Shadows Mockup</a></h3>
 					<span>$12.49</span>
 				</div>
 
@@ -317,7 +317,7 @@
 						<h2 class="section__title section__title--pre">Pre-orders</h2>
 
 						<div class="section__nav-wrap">
-							<a href="catalog.html" class="section__view">View All</a>
+							<a href="/" class="section__view">View All</a>
 
 							<button class="section__nav section__nav--prev" type="button" data-nav="#carousel2">
 								<svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><polyline points='328 112 184 256 328 400' style='fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px'/></svg>
@@ -337,13 +337,13 @@
 		<div class="owl-carousel section__carousel section__carousel--catalog" id="carousel2">
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/6.jpg" alt="">
 					<span class="card__preorder">Pre-order</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">Stationery with Shadows Mockup</a></h3>
+					<h3><a href="/">Stationery with Shadows Mockup</a></h3>
 					<span>$19.99</span>
 				</div>
 
@@ -359,13 +359,13 @@
 
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/1.jpg" alt="">
 					<span class="card__preorder">Pre-order</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">Magazine Showcase Mockup</a></h3>
+					<h3><a href="/">Magazine Showcase Mockup</a></h3>
 					<span>$7.99</span>
 				</div>
 
@@ -381,13 +381,13 @@
 
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/2.jpg" alt="">
 					<span class="card__preorder">Pre-order</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">FlixHub – Digital marketplace HTML Template</a></h3>
+					<h3><a href="/">FlixHub – Digital marketplace HTML Template</a></h3>
 					<span>$12.49</span>
 				</div>
 
@@ -403,13 +403,13 @@
 
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/9.jpg" alt="">
 					<span class="card__preorder">Pre-order</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">Beer Bottle with Labels Mockup</a></h3>
+					<h3><a href="/">Beer Bottle with Labels Mockup</a></h3>
 					<span>$55.99 <s>$79.99</s></span>
 				</div>
 
@@ -425,13 +425,13 @@
 
 			<!-- card -->
 			<div class="card">
-				<a href="details.html" class="card__cover">
+				<a href="/" class="card__cover">
 					<img src="https://flixhub.volkovdesign.com/img/cards/4.jpg" alt="">
 					<span class="card__preorder">Pre-order</span>
 				</a>
 
 				<div class="card__title">
-					<h3><a href="details.html">Coffee Paper Cups Mockup</a></h3>
+					<h3><a href="/">Coffee Paper Cups Mockup</a></h3>
 					<span>$34.99</span>
 				</div>
 
@@ -701,7 +701,7 @@
 						<h2 class="section__title">Latest news</h2>
 
 						<div class="section__nav-wrap">
-							<a href="news.html" class="section__view">View All</a>
+							<a href="/" class="section__view">View All</a>
 						</div>
 					</div>
 				</div>
@@ -710,13 +710,13 @@
 				<!-- big post -->
 				<div class="col-12 col-md-12 col-lg-6">
 					<div class="post post--big">
-						<a href="article.html" class="post__img">
+						<a href="/" class="post__img">
 							<img src="https://flixhub.volkovdesign.com/img/posts/6.jpg" alt="">
 						</a>
 
 						<div class="post__content">
 							<a href="#" class="post__category">Business</a>
-							<h3 class="post__title"><a href="article.html">How the coronavirus affected Esports and the Gaming industry</a></h3>
+							<h3 class="post__title"><a href="/">How the coronavirus affected Esports and the Gaming industry</a></h3>
 							<div class="post__meta">
 								<span class="post__date"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M256,64C150,64,64,150,64,256s86,192,192,192,192-86,192-192S362,64,256,64Z' style='fill:none;stroke-miterlimit:10;stroke-width:32px'/><polyline points='256 128 256 272 352 272' style='fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/></svg> 2 hours ago</span>
 								<span class="post__comments"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M431,320.6c-1-3.6,1.2-8.6,3.3-12.2a33.68,33.68,0,0,1,2.1-3.1A162,162,0,0,0,464,215c.3-92.2-77.5-167-173.7-167C206.4,48,136.4,105.1,120,180.9a160.7,160.7,0,0,0-3.7,34.2c0,92.3,74.8,169.1,171,169.1,15.3,0,35.9-4.6,47.2-7.7s22.5-7.2,25.4-8.3a26.44,26.44,0,0,1,9.3-1.7,26,26,0,0,1,10.1,2L436,388.6a13.52,13.52,0,0,0,3.9,1,8,8,0,0,0,8-8,12.85,12.85,0,0,0-.5-2.7Z' style='fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><path d='M66.46,232a146.23,146.23,0,0,0,6.39,152.67c2.31,3.49,3.61,6.19,3.21,8s-11.93,61.87-11.93,61.87a8,8,0,0,0,2.71,7.68A8.17,8.17,0,0,0,72,464a7.26,7.26,0,0,0,2.91-.6l56.21-22a15.7,15.7,0,0,1,12,.2c18.94,7.38,39.88,12,60.83,12A159.21,159.21,0,0,0,284,432.11' style='fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/></svg> 17</span>
@@ -729,7 +729,7 @@
 				<!-- big video post -->
 				<div class="col-12 col-md-12 col-lg-6">
 					<div class="post post--big">
-						<a href="interview.html" class="post__img">
+						<a href="/" class="post__img">
 							<img src="https://flixhub.volkovdesign.com/img/posts/1.jpg" alt="">
 						</a>
 
@@ -739,7 +739,7 @@
 
 						<div class="post__content">
 							<a href="#" class="post__category">Guide</a>
-							<h3 class="post__title"><a href="interview.html">Box creation Guide</a></h3>
+							<h3 class="post__title"><a href="/">Box creation Guide</a></h3>
 							<div class="post__meta">
 								<span class="post__date"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M256,64C150,64,64,150,64,256s86,192,192,192,192-86,192-192S362,64,256,64Z' style='fill:none;stroke-miterlimit:10;stroke-width:32px'/><polyline points='256 128 256 272 352 272' style='fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/></svg> 3 hours ago</span>
 								<span class="post__comments"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M431,320.6c-1-3.6,1.2-8.6,3.3-12.2a33.68,33.68,0,0,1,2.1-3.1A162,162,0,0,0,464,215c.3-92.2-77.5-167-173.7-167C206.4,48,136.4,105.1,120,180.9a160.7,160.7,0,0,0-3.7,34.2c0,92.3,74.8,169.1,171,169.1,15.3,0,35.9-4.6,47.2-7.7s22.5-7.2,25.4-8.3a26.44,26.44,0,0,1,9.3-1.7,26,26,0,0,1,10.1,2L436,388.6a13.52,13.52,0,0,0,3.9,1,8,8,0,0,0,8-8,12.85,12.85,0,0,0-.5-2.7Z' style='fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><path d='M66.46,232a146.23,146.23,0,0,0,6.39,152.67c2.31,3.49,3.61,6.19,3.21,8s-11.93,61.87-11.93,61.87a8,8,0,0,0,2.71,7.68A8.17,8.17,0,0,0,72,464a7.26,7.26,0,0,0,2.91-.6l56.21-22a15.7,15.7,0,0,1,12,.2c18.94,7.38,39.88,12,60.83,12A159.21,159.21,0,0,0,284,432.11' style='fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/></svg> 11</span>
@@ -752,7 +752,7 @@
 				<!-- video post -->
 				<div class="col-12 col-md-6 col-xl-4">
 					<div class="post">
-						<a href="interview.html" class="post__cover">
+						<a href="/" class="post__cover">
 							<img src="https://flixhub.volkovdesign.com/img/posts/3.jpg" alt="">
 						</a>
 
@@ -762,7 +762,7 @@
 
 						<div class="post__content">
 							<a href="#" class="post__category">Overview</a>
-							<h3 class="post__title"><a href="interview.html">Updated and customized Gamepad</a></h3>
+							<h3 class="post__title"><a href="/">Updated and customized Gamepad</a></h3>
 							<div class="post__meta">
 								<span class="post__date"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M256,64C150,64,64,150,64,256s86,192,192,192,192-86,192-192S362,64,256,64Z' style='fill:none;stroke-miterlimit:10;stroke-width:32px'/><polyline points='256 128 256 272 352 272' style='fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/></svg> 4 hours ago</span>
 								<span class="post__comments"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M431,320.6c-1-3.6,1.2-8.6,3.3-12.2a33.68,33.68,0,0,1,2.1-3.1A162,162,0,0,0,464,215c.3-92.2-77.5-167-173.7-167C206.4,48,136.4,105.1,120,180.9a160.7,160.7,0,0,0-3.7,34.2c0,92.3,74.8,169.1,171,169.1,15.3,0,35.9-4.6,47.2-7.7s22.5-7.2,25.4-8.3a26.44,26.44,0,0,1,9.3-1.7,26,26,0,0,1,10.1,2L436,388.6a13.52,13.52,0,0,0,3.9,1,8,8,0,0,0,8-8,12.85,12.85,0,0,0-.5-2.7Z' style='fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><path d='M66.46,232a146.23,146.23,0,0,0,6.39,152.67c2.31,3.49,3.61,6.19,3.21,8s-11.93,61.87-11.93,61.87a8,8,0,0,0,2.71,7.68A8.17,8.17,0,0,0,72,464a7.26,7.26,0,0,0,2.91-.6l56.21-22a15.7,15.7,0,0,1,12,.2c18.94,7.38,39.88,12,60.83,12A159.21,159.21,0,0,0,284,432.11' style='fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/></svg> 14</span>
@@ -775,13 +775,13 @@
 				<!-- post -->
 				<div class="col-12 col-md-6 col-xl-4">
 					<div class="post">
-						<a href="article.html" class="post__img">
+						<a href="/" class="post__img">
 							<img src="https://flixhub.volkovdesign.com/img/posts/4.jpg" alt="">
 						</a>
 
 						<div class="post__content">
 							<a href="#" class="post__category">Design</a>
-							<h3 class="post__title"><a href="article.html">July’s Most Popular Design News Articles</a></h3>
+							<h3 class="post__title"><a href="/">July’s Most Popular Design News Articles</a></h3>
 							<div class="post__meta">
 								<span class="post__date"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M256,64C150,64,64,150,64,256s86,192,192,192,192-86,192-192S362,64,256,64Z' style='fill:none;stroke-miterlimit:10;stroke-width:32px'/><polyline points='256 128 256 272 352 272' style='fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/></svg> 2 hours ago</span>
 								<span class="post__comments"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M431,320.6c-1-3.6,1.2-8.6,3.3-12.2a33.68,33.68,0,0,1,2.1-3.1A162,162,0,0,0,464,215c.3-92.2-77.5-167-173.7-167C206.4,48,136.4,105.1,120,180.9a160.7,160.7,0,0,0-3.7,34.2c0,92.3,74.8,169.1,171,169.1,15.3,0,35.9-4.6,47.2-7.7s22.5-7.2,25.4-8.3a26.44,26.44,0,0,1,9.3-1.7,26,26,0,0,1,10.1,2L436,388.6a13.52,13.52,0,0,0,3.9,1,8,8,0,0,0,8-8,12.85,12.85,0,0,0-.5-2.7Z' style='fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><path d='M66.46,232a146.23,146.23,0,0,0,6.39,152.67c2.31,3.49,3.61,6.19,3.21,8s-11.93,61.87-11.93,61.87a8,8,0,0,0,2.71,7.68A8.17,8.17,0,0,0,72,464a7.26,7.26,0,0,0,2.91-.6l56.21-22a15.7,15.7,0,0,1,12,.2c18.94,7.38,39.88,12,60.83,12A159.21,159.21,0,0,0,284,432.11' style='fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/></svg> 18</span>
@@ -794,13 +794,13 @@
 				<!-- post -->
 				<div class="col-12 col-md-6 col-xl-4">
 					<div class="post">
-						<a href="article.html" class="post__img">
+						<a href="/" class="post__img">
 							<img src="https://flixhub.volkovdesign.com/img/posts/5.jpg" alt="">
 						</a>
 
 						<div class="post__content">
 							<a href="#" class="post__category">VR</a>
-							<h3 class="post__title"><a href="article.html">Augmented reality (AR) and Virtual Reality (VR) bridge..</a></h3>
+							<h3 class="post__title"><a href="/">Augmented reality (AR) and Virtual Reality (VR) bridge..</a></h3>
 							<div class="post__meta">
 								<span class="post__date"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M256,64C150,64,64,150,64,256s86,192,192,192,192-86,192-192S362,64,256,64Z' style='fill:none;stroke-miterlimit:10;stroke-width:32px'/><polyline points='256 128 256 272 352 272' style='fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/></svg> 9 hours ago</span>
 								<span class="post__comments"><svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><path d='M431,320.6c-1-3.6,1.2-8.6,3.3-12.2a33.68,33.68,0,0,1,2.1-3.1A162,162,0,0,0,464,215c.3-92.2-77.5-167-173.7-167C206.4,48,136.4,105.1,120,180.9a160.7,160.7,0,0,0-3.7,34.2c0,92.3,74.8,169.1,171,169.1,15.3,0,35.9-4.6,47.2-7.7s22.5-7.2,25.4-8.3a26.44,26.44,0,0,1,9.3-1.7,26,26,0,0,1,10.1,2L436,388.6a13.52,13.52,0,0,0,3.9,1,8,8,0,0,0,8-8,12.85,12.85,0,0,0-.5-2.7Z' style='fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><path d='M66.46,232a146.23,146.23,0,0,0,6.39,152.67c2.31,3.49,3.61,6.19,3.21,8s-11.93,61.87-11.93,61.87a8,8,0,0,0,2.71,7.68A8.17,8.17,0,0,0,72,464a7.26,7.26,0,0,0,2.91-.6l56.21-22a15.7,15.7,0,0,1,12,.2c18.94,7.38,39.88,12,60.83,12A159.21,159.21,0,0,0,284,432.11' style='fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/></svg> 50</span>
