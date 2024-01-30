@@ -5,16 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="https://flixhub.volkovdesign.com/css/bootstrap-reboot.min.css">
-	<link rel="stylesheet" href="https://flixhub.volkovdesign.com/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="https://flixhub.volkovdesign.com/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="https://flixhub.volkovdesign.com/css/magnific-popup.css">
-	<link rel="stylesheet" href="https://flixhub.volkovdesign.com/css/nouislider.min.css">
-	<link rel="stylesheet" href="https://flixhub.volkovdesign.com/css/jquery.mCustomScrollbar.min.css">
-	<link rel="stylesheet" href="https://flixhub.volkovdesign.com/css/paymentfont.min.css">
-	<link rel="stylesheet" href="https://flixhub.volkovdesign.com/css/main.css">
-
-	<!-- Favicons -->
+	<link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" href="./css/magnific-popup.css">
+	<link rel="stylesheet" href="./css/nouislider.min.css">
+	<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="./css/paymentfont.min.css">
+	<link rel="stylesheet" href="./css/main(1).css">
 	
 	<meta name="description" content="">
 	<meta name="keywords" content="">
