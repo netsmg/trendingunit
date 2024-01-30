@@ -12,7 +12,12 @@
   }
 </script>
 
-
+ <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+        <link href="./css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="./css/icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="./css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 <div class="account-pages my-5 pt-sm-5">
   <div class="container">
     <div class="row justify-content-center">
