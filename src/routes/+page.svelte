@@ -35,7 +35,9 @@
 								<span></span>
 							</button>
 
-							
+								<a href="/" class="header__logo">
+								<img src="https://flixhub.volkovdesign.com/img/logo.svg" alt="">
+							</a>
 
 							<ul class="header__nav">
 								<li class="header__nav-item">
