@@ -1,4 +1,11 @@
-
+<head>
+<meta charset="utf-8" />
+    <title>Privacy| Webui</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Responsive Bootstrap 5 Chat App" name="description" />
+    <meta content="Netsmg" name="author" />
+    <!-- App favicon -->
+    
     
 
 <link
@@ -10,7 +17,7 @@
     <link href="./css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="./css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-
+</head>
                <div class="main-content">
 
             <div class="page-content">
