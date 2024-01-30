@@ -23,10 +23,7 @@
     <div class="row justify-content-center">
       <div class="col-md-8 col-lg-6 col-xl-5">
         <div class="text-center mb-4">
-          <a href="index.html" class="auth-logo mb-5 d-block">
-            <img src="https://themesbrand.com/chatvia/layouts/assets/images/logo.svg" alt="webui">
-            <h1 class="auth-logo mb-5 d-block text-center mb-4 fw-medium text-primary">Webui</h1>
-          </a>
+          
 
           <h4>Lock screen</h4>
           <p class="text-muted mb-4">Enter your password to unlock the screen!</p>
