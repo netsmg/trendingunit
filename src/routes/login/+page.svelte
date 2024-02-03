@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { fauth, db } from "$src/firebase";
+  import { fauth, db } from "$firebase";
   
   import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import {goto} from '$app/navigation';
