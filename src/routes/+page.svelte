@@ -113,6 +113,13 @@
                     <p>&copy; {year} Webui. </p>
                   </div>
                 {:else}
+ <div class="mt-4 text-center">
+                      <p class="text-muted mb-0">
+                        By registering you agree to the Webui
+                        <a href="/" class="text-primary">
+                          Terms of Use
+                        </a>
+                      </p>
                   <div class="mt-5 text-center">
                     <p>
                       Already have an account?
