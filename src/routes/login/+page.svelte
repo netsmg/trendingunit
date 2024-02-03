@@ -1,7 +1,7 @@
 <!-- routes/login.svelte -->
 <script>
   import { onMount } from 'svelte';
-  import { auth } from '../firebase.js';
+  import { auth } from '$src/firebase';
 
   let username = '';
   let password = '';
