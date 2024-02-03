@@ -1,65 +1,64 @@
 <script>
-	import { browser } from '$app/environment';
-	import { page } from '$app/stores';
-	import { webVitals } from '$lib/vitals';
-	
-	import './styles.css';
+  
+  import { page } from "$app/stores";
+  import {onAuthStateChanged, signOut} from 'firebase/auth'
+  import { fauth } from "../firebase";
+  import {onMount} from 'svelte';
+  import {userStore} from "../stores/userStore"
+  
+  
+  let me;
+onMount(async () => {
+    document.title = "Webui | Home";
 
-	/** @type {import('./$types').LayoutServerData} */
-	export let data;
+    onAuthStateChanged(fauth, async (user) => {
+      if (user) {
+        userStore.set({ ...user, loggedIn: true });
+        me = user;
+      } else {
+        me = false;
+        console.log('User Not Logged In!');
+        userStore.set({ loggedIn: false });
+      }
+    });
+  });
 
-	$: if (browser && data?.analyticsId) {
-		webVitals({
-			path: $page.url.pathname,
-			params: $page.params,
-			analyticsId: data.analyticsId
-		});
-	}
+  let btnClass = 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
 </script>
+<svelte:head>
+  
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
 
-<div class="app">
-	
+</svelte:head>
 
-	<main>
-		<slot />
-	</main>
 
-	
-</div>
 
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+      
+ 
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
 
-	footer a {
-		font-weight: bold;
-	}
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
-</style>
+  
+
+  
+    <slot />
+  
+    
+  
+
+   
+
+
+
+
+    
+  
+
+   
+
+
+
