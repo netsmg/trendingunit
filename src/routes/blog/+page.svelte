@@ -1,10 +1,9 @@
 <script>
-import { fstore } from "$lib/firebase"; 
   import { collection, onSnapshot } from 'firebase/firestore';
   import { getFirestore } from 'firebase/firestore';
 
   let posts = [];
-  const db = fstore();
+  const db = getFirestore();
   const query = collection(db, 'products');
 
   onSnapshot(query, (snapshot) => {
