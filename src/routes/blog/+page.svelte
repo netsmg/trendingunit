@@ -1,5 +1,5 @@
 <script>
-import { fstore } from "../../firebase"; 
+import { fstore } from "$lib/firebase"; 
   import { collection, onSnapshot } from 'firebase/firestore';
   import { getFirestore } from 'firebase/firestore';
 
