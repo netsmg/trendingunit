@@ -6,45 +6,24 @@
   import { fauth } from "../firebase";
   import {onMount} from 'svelte';
   import {userStore} from "../stores/userStore"
-  import toast, { Toaster } from 'svelte-toast';
+  
   
   let me;
-  onMount(async () => {
+onMount(async () => {
     document.title = "Webui | Home";
-   const  saveSettings =() => {
-      return new Promise((resolve, reject) => {
-        let x = setInterval(()=>{
-          if($userStore.loggedIn===true){
-          resolve();
-          clearInterval(x);
-        }else if($userStore.loggedIn===false){
-          reject();
-          clearInterval(x);
-        }
-        }, 100)
-      });
-    }
-    toast.promise(
-        saveSettings(),
-        {
-          loading: 'Checking...',
-          success: 'Signed In!',
-          error: 'You are not signed In!',
-        },
-    );
-    onAuthStateChanged(fauth, async(user) => {
-        if(user) {
-            userStore.set({...user, loggedIn: true});
-            me = user;
-        } else{
-           me = false
-            console.log('User Not Logged In!');
-            userStore.set({loggedIn: false});
-        }
-       
+
+    onAuthStateChanged(fauth, async (user) => {
+      if (user) {
+        userStore.set({ ...user, loggedIn: true });
+        me = user;
+      } else {
+        me = false;
+        console.log('User Not Logged In!');
+        userStore.set({ loggedIn: false });
+      }
     });
-  
   });
+
 
   
 
