@@ -50,4 +50,4 @@
     </div>
   {/each}
 </div>
-</section
+</section>
