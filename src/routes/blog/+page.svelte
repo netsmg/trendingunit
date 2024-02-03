@@ -10,6 +10,15 @@
     posts = snapshot.docs.map((doc) => doc.data());
   });
 </script>
+<link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" href="./css/magnific-popup.css">
+	<link rel="stylesheet" href="./css/nouislider.min.css">
+	<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="./css/paymentfont.min.css">
+	<link rel="stylesheet" href="./css/main (1).css">
+<section class="section main container">
 
 <div>
   {#each posts as post}
@@ -41,3 +50,4 @@
     </div>
   {/each}
 </div>
+</section
