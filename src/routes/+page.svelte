@@ -1,137 +1,114 @@
 <script>
   import { onMount } from 'svelte';
   import { fauth, db } from "../firebase";
-  
-  import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import {goto} from '$app/navigation';
+  import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+  import { goto } from '$app/navigation';
+
   const auth = getAuth();
   
   let email = '';
   let password = '';
+  let isSignIn = true; // Initial state: sign-in form is visible
 
-  function signIn() {
-    signInWithEmailAndPassword(auth, email, password)
+  function handleAuthentication(action) {
+    action(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log('Signed in user:', user);
-        goto('/');
+        console.log(`${isSignIn ? 'Signed in' : 'Signed up'} user:`, user);
+        goto('/blog');
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.error(`Sign-in error (${errorCode}): ${errorMessage}`);
+        console.error(`${isSignIn ? 'Sign-in' : 'Sign-up'} error (${errorCode}): ${errorMessage}`);
       });
   }
+
+  function toggleForm() {
+    isSignIn = !isSignIn;
+  }
+
   export let year = new Date().getFullYear();
 </script>
 
+<div class="account-pages my-5 pt-sm-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 col-xl-5">
 
-
-
-
-
-
-  <head>
-    <meta charset="utf-8" />
-    <title>Log in | Webui</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta content="Webui a authentic web app" name="description" />
-    <meta content="Netsmg" name="author" />
-    <!-- App favicon -->
-    
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link href="./css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
-    <link href="./css/icons.min.css" rel="stylesheet" type="text/css" />
-    <!-- App Css-->
-    <link href="./css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-  </head>
-
-  <body>
-    <div class="account-pages my-5 pt-sm-5">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-lg-6 col-xl-5">
-            <div class="text-center mb-4">
-              
-              <h4>Sign in</h4>
-              <p class="text-muted mb-4">Sign in to continue to Webui.</p>
-            </div>
-
-            <div class="card">
-              <div class="card-body p-4">
-                <div class="p-3">
-                  <form>
-                    <div class="mb-3">
-                      <label class="form-label">Username</label>
-                      <div class="input-group mb-3 bg-light-subtle rounded-3">
-                        <span class="input-group-text text-muted" id="basic-addon3">
-                          <i class="ri-user-2-line"></i>
-                        </span>
-                        <input
-                          type="email"
-                          class="form-control form-control-lg border-light bg-light-subtle"
-                          placeholder="Enter Username"
-                          aria-label="Enter Username"
-                          aria-describedby="basic-addon3"
-                       bind:value={email} required />
-                      </div>
-                    </div>
-
-                    <div class="mb-4">
-                      <div class="float-end">
-                        <a href="./auth-recover" class="text-muted font-size-13">
-                          Forgot password?
-                        </a>
-                      </div>
-                      <label class="form-label">Password</label>
-                      <div class="input-group mb-3 bg-light-subtle rounded-3">
-                        <span class="input-group-text text-muted" id="basic-addon4">
-                          <i class="ri-lock-2-line"></i>
-                        </span>
-                        <input
-                          type="password"
-                          class="form-control form-control-lg border-light bg-light-subtle"
-                          placeholder="Enter Password"
-                          aria-label="Enter Password"
-                          aria-describedby="basic-addon4"
-                        bind:value={password} required/>
-                      </div>
-                    </div>
-
-                    <div class="form-check mb-4">
-                      <input type="checkbox" class="form-check-input" id="remember-check" required />
-                      <label class="form-check-label" for="remember-check">Remember me</label>
-                    </div>
-
-                    <div class="d-grid">
-                      <button class="btn btn-primary waves-effect waves-light" type="submit" on:click={signIn}>
-                        Sign in
-                      </button>
-                    </div>
-                  </form>
-                </div>
+        <div class="p-3">
+          <form>
+            <!-- Email and Password input fields... -->
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <div class="input-group bg-light-subtle rounded-3 mb-3">
+                <span class="input-group-text text-muted" id="basic-addon5">
+                  <i class="ri-mail-line"></i>
+                </span>
+                <input
+                  type="email"
+                  class="form-control form-control-lg bg-light-subtle border-light"
+                  placeholder="Enter Email"
+                  aria-label="Enter Email"
+                  aria-describedby="basic-addon5" bind:value={email} required
+                />
               </div>
             </div>
 
-            <div class="mt-5 text-center">
-              <p>
-                Don't have an account ?{" "}
-                <a href="./register" class="fw-medium text-primary">
-                  Signup now
-                </a>{" "}
-              </p>
-              <p>&copy; {year} Webui. </p>
+            <div class="mb-4">
+              <label class="form-label">Password</label>
+              <div class="input-group bg-light-subtle mb-3 rounded-3">
+                <span class="input-group-text border-light text-muted" id="basic-addon7" >
+                  <i class="ri-lock-2-line"></i>
+                </span>
+                <input
+                  type="password"
+                  class="form-control form-control-lg bg-light-subtle border-light"
+                  placeholder="Enter Password"
+                  aria-label="Enter Password"
+                  aria-describedby="basic-addon7" bind:value={password} required
+                />
+              </div>
             </div>
-          </div>
+
+            {#if isSignIn}
+              <!-- Sign-in form -->
+              <div class="d-grid">
+                <button class="btn btn-primary waves-effect waves-light" type="submit" on:click={() => handleAuthentication(signInWithEmailAndPassword)}>
+                  Sign in
+                </button>
+              </div>
+            {:else}
+              <!-- Sign-up form -->
+              <div class="d-grid">
+                <button class="btn btn-primary waves-effect waves-light" type="submit" on:click={() => handleAuthentication(createUserWithEmailAndPassword)}>
+                  Sign up
+                </button>
+              </div>
+            {/if}
+
+            <!-- Toggle between Sign-in and Sign-up forms -->
+            <div class="text-center mt-3">
+              <button type="button" class="btn btn-link text-muted" on:click={toggleForm}>
+                {#if isSignIn}
+                  <div class="mt-5 text-center">
+                    Don't have an account? Sign up
+                    <p>&copy; {year} Webui. </p>
+                  </div>
+                {:else}
+                  <div class="mt-5 text-center">
+                    <p>
+                      Already have an account?
+                    </p>
+                    <p>&copy; {year} Webui. </p>
+                  </div>
+                {/if}
+              </button>
+            </div>
+          </form>
         </div>
+
       </div>
     </div>
-    <!-- end account-pages -->
-
-    <!-- JAVASCRIPT -->
-  </body>
-  
+  </div>
+</div>
