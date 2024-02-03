@@ -1,6 +1,47 @@
+<!-- routes/login.svelte -->
 <script>
+  import { onMount } from 'svelte';
+  import { auth } from '../firebase.js';
+
+  let username = '';
+  let password = '';
+
+  onMount(() => {
+    // Check if the user is already signed in
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in, redirect or perform desired action
+        console.log('User is already signed in:', user);
+window.location('/');
+        // Redirect or perform any other actions here
+      }
+    });
+
+    return unsubscribe;
+  });
+
+  const signIn = async () => {
+    try {
+      // Sign in with Firebase authentication
+      const userCredential = await auth.signInWithEmailAndPassword(username, password);
+
+      // Access the signed-in user information
+      const user = userCredential.user;
+      console.log('Successfully signed in:', user);
+
+      // Redirect or perform any other actions after successful sign-in
+    } catch (error) {
+      console.error('Error signing in:', error.message);
+      // Handle errors or display error messages to the user
+    }
+  };
   export let year = new Date().getFullYear();
 </script>
+
+
+
+
+
 
 
 <html lang="en">
@@ -37,7 +78,7 @@
             <div class="card">
               <div class="card-body p-4">
                 <div class="p-3">
-                  <form action="./">
+                  <form on:submit|preventDefault={signIn}>
                     <div class="mb-3">
                       <label class="form-label">Username</label>
                       <div class="input-group mb-3 bg-light-subtle rounded-3">
