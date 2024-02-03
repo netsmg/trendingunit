@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+import { onMount } from "svelte";
   import { getDatabase, ref, push } from "firebase/database";
 
   let formData = {
@@ -40,6 +40,14 @@
 <!-- end page title -->
 
 <!-- section -->
+<link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" href="./css/magnific-popup.css">
+	<link rel="stylesheet" href="./css/nouislider.min.css">
+	<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="./css/paymentfont.min.css">
+	<link rel="stylesheet" href="./css/main (1).css">
 <section class="section">
   <div class="container">
     <div class="row">
