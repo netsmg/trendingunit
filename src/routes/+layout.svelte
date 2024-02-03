@@ -4,7 +4,7 @@
   import { page } from '$app/stores';
   import { webVitals } from '$lib/vitals';
   import { auth } from '../firebase'; // Adjust the path based on your file structure
-
+  import { onMount } from 'svelte';
   import './styles.css';
 
   /** @type {import('./$types').LayoutServerData} */
