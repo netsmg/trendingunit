@@ -50,7 +50,7 @@ onMount(async () => {
 />
 
 </svelte:head>
-<Toaster/>
+
 
 
 <Navbar
