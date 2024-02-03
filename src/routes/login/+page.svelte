@@ -12,6 +12,7 @@
       if (user) {
         // User is signed in, redirect or perform desired action
         console.log('User is already signed in:', user);
+window.location('/');
         // Redirect or perform any other actions here
       }
     });
