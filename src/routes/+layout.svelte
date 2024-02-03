@@ -1,5 +1,5 @@
 <script>
-  import { Navbar, NavBrand, Dropdown, DropdownItem, DropdownHeader, Chevron } from "flowbite-svelte";
+  import { Navbar, NavBrand, Dropdown, DropdownItem, DropdownHeader} from "flowbite-svelte";
   import Icon from "@iconify/svelte";
   import { page } from "$app/stores";
   import {onAuthStateChanged, signOut} from 'firebase/auth'
@@ -121,7 +121,7 @@
   </NavBrand>
  
   {#if me}
-  <Chevron aligned><div><img class="w-[30px] h-[30px] rounded-full s-nb_ptBq0IalQ" src={me.photoURL} alt="Rounded avatar"></div></Chevron>
+  <div><img class="w-[30px] h-[30px] rounded-full s-nb_ptBq0IalQ" src={me.photoURL} alt="Rounded avatar"></div>
   <Dropdown>
     <DropdownHeader>{me.displayName}</DropdownHeader>
     <DropdownItem><div class="flex justify-between items-center"><div class="flex gap-1 items-center"><Icon icon="mdi:theme-light-dark" /> Theme</div> <DarkMode {btnClass} /></div></DropdownItem>
