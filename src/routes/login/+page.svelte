@@ -1,14 +1,41 @@
 <script>
+  import { onMount } from 'svelte';
+  import { fauth, db } from "../../firebase";
+  
+  import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import {goto} from '$app/navigation';
+  const auth = getAuth();
+  
+  let email = '';
+  let password = '';
+
+  function signIn() {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log('Signed in user:', user);
+        goto('/');
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error(`Sign-in error (${errorCode}): ${errorMessage}`);
+      });
+  }
   export let year = new Date().getFullYear();
 </script>
 
 
-<html lang="en">
+
+
+
+
+
   <head>
     <meta charset="utf-8" />
     <title>Log in | Webui</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta content="Responsive Bootstrap 5 Chat App" name="description" />
+    <meta content="Webui a authentic web app" name="description" />
     <meta content="Netsmg" name="author" />
     <!-- App favicon -->
     
@@ -37,7 +64,7 @@
             <div class="card">
               <div class="card-body p-4">
                 <div class="p-3">
-                  <form action="./">
+                  <form>
                     <div class="mb-3">
                       <label class="form-label">Username</label>
                       <div class="input-group mb-3 bg-light-subtle rounded-3">
@@ -45,12 +72,12 @@
                           <i class="ri-user-2-line"></i>
                         </span>
                         <input
-                          type="text"
+                          type="email"
                           class="form-control form-control-lg border-light bg-light-subtle"
                           placeholder="Enter Username"
                           aria-label="Enter Username"
                           aria-describedby="basic-addon3"
-                        />
+                       bind:value={email} required />
                       </div>
                     </div>
 
@@ -71,17 +98,17 @@
                           placeholder="Enter Password"
                           aria-label="Enter Password"
                           aria-describedby="basic-addon4"
-                        />
+                        bind:value={password} required/>
                       </div>
                     </div>
 
                     <div class="form-check mb-4">
-                      <input type="checkbox" class="form-check-input" id="remember-check" />
+                      <input type="checkbox" class="form-check-input" id="remember-check" required />
                       <label class="form-check-label" for="remember-check">Remember me</label>
                     </div>
 
                     <div class="d-grid">
-                      <button class="btn btn-primary waves-effect waves-light" type="submit">
+                      <button class="btn btn-primary waves-effect waves-light" type="submit" on:click={signIn}>
                         Sign in
                       </button>
                     </div>
@@ -107,4 +134,4 @@
 
     <!-- JAVASCRIPT -->
   </body>
-</html>
+  
