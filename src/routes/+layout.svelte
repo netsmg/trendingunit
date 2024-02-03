@@ -6,7 +6,7 @@
   import { fauth } from "../firebase";
   import {onMount} from 'svelte';
   import {userStore} from "../stores/userStore"
-  import toast, { Toaster } from 'svelte-french-toast';
+  import toast, { Toaster } from 'svelte-toast';
   
   let me;
   onMount(async () => {
