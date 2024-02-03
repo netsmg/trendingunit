@@ -1,14 +1,33 @@
 <script>
+  import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+  import { fauth } from "../../firebase"; 
+  import { goto } from '$app/navigation';
+  
+  let email = '';
+  let password = '';
+
+  function signUp() {
+    createUserWithEmailAndPassword(fauth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log('User signed up:', user);
+        goto('/login');
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error(`Sign-up error (${errorCode}): ${errorMessage}`);
+      });
+  }
   export let year = new Date().getFullYear();
 </script>
 
 
-<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Register | Webui</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta content="Responsive Bootstrap 5 Chat App" name="description" />
+    <meta content="An authentic blog ui" name="description" />
     <meta content="Netsmg" name="author" />
     
     <link
@@ -37,7 +56,7 @@
             <div class="card">
               <div class="card-body p-4">
                 <div class="p-3">
-                  <form action="./">
+                  <form>
                     <div class="mb-3">
                       <label class="form-label">Email</label>
                       <div class="input-group bg-light-subtle rounded-3 mb-3">
@@ -49,7 +68,7 @@
                           class="form-control form-control-lg bg-light-subtle border-light"
                           placeholder="Enter Email"
                           aria-label="Enter Email"
-                          aria-describedby="basic-addon5"
+                          aria-describedby="basic-addon5"bind:value={email} required
                         />
                       </div>
                     </div>
@@ -73,7 +92,7 @@
                     <div class="mb-4">
                       <label class="form-label">Password</label>
                       <div class="input-group bg-light-subtle mb-3 rounded-3">
-                        <span class="input-group-text border-light text-muted" id="basic-addon7">
+                        <span class="input-group-text border-light text-muted" id="basic-addon7" >
                           <i class="ri-lock-2-line"></i>
                         </span>
                         <input
@@ -81,13 +100,13 @@
                           class="form-control form-control-lg bg-light-subtle border-light"
                           placeholder="Enter Password"
                           aria-label="Enter Password"
-                          aria-describedby="basic-addon7"
+                          aria-describedby="basic-addon7" bind:value={password} required
                         />
                       </div>
                     </div>
 
                     <div class="d-grid">
-                      <button class="btn btn-primary waves-effect waves-light" type="submit">
+                      <button class="btn btn-primary waves-effect waves-light" type="submit" on:click={signUp}>
                         Sign up
                       </button>
                     </div>
@@ -95,7 +114,7 @@
                     <div class="mt-4 text-center">
                       <p class="text-muted mb-0">
                         By registering you agree to the Webui
-                        <a href="#" class="text-primary">
+                        <a href="/" class="text-primary">
                           Terms of Use
                         </a>
                       </p>
@@ -122,4 +141,3 @@
 
     <!-- JAVASCRIPT -->
   </body>
-</html>
