@@ -1,9 +1,10 @@
-// firebase.js
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-import { getDatabase } from "firebase/database";
-
+// import { getAnalytics } from "firebase/analytics";
+import { getDatabase} from "firebase/database"
+import { getFirestore } from "firebase/firestore"
+import { getStorage } from 'firebase/storage';
+import {getAuth} from 'firebase/auth'
+ 
 const firebaseConfig = {
   apiKey: "AIzaSyBzzaSTr42firr3fx5YcdXhDzB4iBLVBOM",
   authDomain: "contact-database-9c47b.firebaseapp.com",
@@ -13,11 +14,13 @@ const firebaseConfig = {
   messagingSenderId: "118822537955",
   appId: "1:118822537955:web:3ef795baeadbe37b7293d6",
   measurementId: "G-0WY0798WFC"
-  // Paste your Firebase configuration object here
+  
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
-
-export const auth = getAuth(firebaseApp);
-export const firestore = getFirestore(firebaseApp);
-export const database = getDatabase(firebaseApp); 
+// Initialize Firebase
+export const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+export const db = getDatabase(app);
+export const storage = getStorage(app);
+export const fstore = getFirestore(app);
+export const fauth = getAuth(app);
