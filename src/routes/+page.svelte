@@ -1,21 +1,60 @@
+
+
 <script>
   import { onMount } from 'svelte';
-  import { fauth, db } from "../firebase";
+  import { fauth } from "../firebase";
   import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
   import { goto } from '$app/navigation';
+import toast, { Toaster } from 'svelte-french-toast';
 
+import {userStore} from "../stores/userStore"
   const auth = getAuth();
-  
   let email = '';
   let password = '';
-  let isSignIn = true; // Initial state: sign-in form is visible
+  let isSignIn = true;
+
+  onMount(async () => {
+    document.title = "Webui | Home";
+    
+    const saveSettings = () => new Promise((resolve, reject) => {
+      let x = setInterval(() => {
+        if ($userStore.loggedIn === true) {
+          resolve();
+          clearInterval(x);
+        } else if ($userStore.loggedIn === false) {
+          reject();
+          clearInterval(x);
+        }
+      }, 100);
+    });
+
+    toast.promise(
+      saveSettings(),
+      {
+        loading: 'Checking...',
+        success: 'Signed In!',
+        error: 'You are not signed In!',
+      },
+    );
+
+    onAuthStateChanged(fauth, async(user) => {
+      if (user) {
+        userStore.set({ ...user, loggedIn: true });
+        me = user;
+      } else {
+        me = false;
+        console.log('User Not Logged In!');
+        userStore.set({ loggedIn: false });
+      }
+    });
+  });
 
   function handleAuthentication(action) {
     action(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(`${isSignIn ? 'Signed in' : 'Signed up'} user:`, user);
-        goto('/dashboard');
+        goto('/blog');
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -30,6 +69,8 @@
 
   export let year = new Date().getFullYear();
 </script>
+
+<!-- Rest of your HTML structure remains unchanged -->
 <head>
     <meta charset="utf-8" />
     <title>Log in | Webui</title>
@@ -48,6 +89,7 @@
     <!-- App Css-->
     <link href="./css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
   </head>
+<Toaster/>
 <div class="account-pages my-5 pt-sm-5">
   <div class="container">
     <div class="row justify-content-center">
@@ -126,10 +168,9 @@
                           Terms of Use
                         </a>
                       </p>
-                    <p class="text-muted mb-0">
-                    
-                      Already have an account?
-                  Login </p>
+                    <p>
+                      Already have an account? Login
+                    </p>
                     <p>&copy; {year} Webui. </p>
                   </div>
                 {/if}
@@ -142,4 +183,10 @@
     </div>
   </div>
 </div>
+
+
+
+
+   
+
 
