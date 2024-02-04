@@ -5,7 +5,8 @@
   import { fauth } from "../firebase";
   import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
   import { goto } from '$app/navigation';
-  import toast from 'svelte-french-toast';
+import toast, { Toaster } from 'svelte-french-toast';
+
 import {userStore} from "../stores/userStore"
   const auth = getAuth();
   let email = '';
