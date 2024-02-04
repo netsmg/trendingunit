@@ -18,7 +18,7 @@
     addDoc, Timestamp,
     increment
   } from "firebase/firestore";
-  import { fstore } from "../../../firebase";
+  import { fstore } from "./firebase";
   // import { push } from "firebase/database";
   import CommentCard from "../../../lib/Components/CommentCard.svelte";
   import SendInput from "../../../lib/Components/SendInput.svelte";
