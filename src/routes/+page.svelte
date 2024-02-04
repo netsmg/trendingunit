@@ -126,9 +126,10 @@
                           Terms of Use
                         </a>
                       </p>
-                    <p>
+                    <p class="text-muted mb-0">
+                    
                       Already have an account?
-                  <h4>Login</h4>   </p>
+                  Login </p>
                     <p>&copy; {year} Webui. </p>
                   </div>
                 {/if}
