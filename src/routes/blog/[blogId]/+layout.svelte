@@ -2,9 +2,10 @@
   
   import { page } from "$app/stores";
   import {onAuthStateChanged, signOut} from 'firebase/auth'
-  import { fauth } from "../firebase";
+  import { fauth } from "./firebase";
   import {onMount} from 'svelte';
-  import {userStore} from "../stores/userStore"
+import { userStore } from "../../../stores/userStore";
+  
   import toast, { Toaster } from 'svelte-french-toast';
   
   let me;
