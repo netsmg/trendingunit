@@ -1,5 +1,5 @@
 <script>
-  import Header from './Header.svelte';
+  
   import { page } from "$app/stores";
   import {onAuthStateChanged, signOut} from 'firebase/auth'
   import { fauth } from "../firebase";
@@ -55,8 +55,8 @@ onMount(async () => {
 />
 
 </svelte:head>
+<slot />
 
-<Header/>
 
 
       
@@ -67,7 +67,7 @@ onMount(async () => {
   
 
   
-    <slot />
+    
   
     
   
