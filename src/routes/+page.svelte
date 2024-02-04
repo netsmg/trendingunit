@@ -89,6 +89,7 @@ import {userStore} from "../stores/userStore"
     <!-- App Css-->
     <link href="./css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
   </head>
+<Toaster/>
 <div class="account-pages my-5 pt-sm-5">
   <div class="container">
     <div class="row justify-content-center">
