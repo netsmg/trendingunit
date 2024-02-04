@@ -1,14 +1,52 @@
+
+
 <script>
   import { onMount } from 'svelte';
-  import { fauth, db } from "../firebase";
+  import { fauth } from "../firebase";
   import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
   import { goto } from '$app/navigation';
+  import toast from 'svelte-french-toast';
 
   const auth = getAuth();
-  
   let email = '';
   let password = '';
-  let isSignIn = true; // Initial state: sign-in form is visible
+  let isSignIn = true;
+
+  onMount(async () => {
+    document.title = "Webui | Home";
+    
+    const saveSettings = () => new Promise((resolve, reject) => {
+      let x = setInterval(() => {
+        if ($userStore.loggedIn === true) {
+          resolve();
+          clearInterval(x);
+        } else if ($userStore.loggedIn === false) {
+          reject();
+          clearInterval(x);
+        }
+      }, 100);
+    });
+
+    toast.promise(
+      saveSettings(),
+      {
+        loading: 'Checking...',
+        success: 'Signed In!',
+        error: 'You are not signed In!',
+      },
+    );
+
+    onAuthStateChanged(fauth, async(user) => {
+      if (user) {
+        userStore.set({ ...user, loggedIn: true });
+        me = user;
+      } else {
+        me = false;
+        console.log('User Not Logged In!');
+        userStore.set({ loggedIn: false });
+      }
+    });
+  });
 
   function handleAuthentication(action) {
     action(auth, email, password)
@@ -30,6 +68,8 @@
 
   export let year = new Date().getFullYear();
 </script>
+
+<!-- Rest of your HTML structure remains unchanged -->
 <head>
     <meta charset="utf-8" />
     <title>Log in | Webui</title>
@@ -52,7 +92,11 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8 col-lg-6 col-xl-5">
-
+<div class="text-center mb-4">
+              
+              <h4>Sign in</h4>
+              <p class="text-muted mb-4">Sign in to continue to Webui.</p>
+            </div>
         <div class="p-3">
           <form>
             <!-- Email and Password input fields... -->
@@ -137,3 +181,11 @@
     </div>
   </div>
 </div>
+
+
+
+
+   
+
+
+
