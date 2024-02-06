@@ -1,4 +1,43 @@
 
+ 
+<script>
+  // Reactive variable for tracking header state
+  let isHeaderFixed = false;
+
+  // Function to handle sticky header behavior
+  function handleStickyHeader() {
+    isHeaderFixed = window.pageYOffset > 0;
+  }
+
+  // Function to toggle navbar menu for mobile
+  function toggleNavbarMenu() {
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarMenu = document.querySelector(".navbar-wrapper");
+
+    if (navbarToggler && navbarMenu) {
+      navbarToggler.classList.toggle("active");
+      navbarMenu.classList.toggle("active");
+    }
+  }
+
+  // Function to handle dropdown menu toggler for mobile
+  function toggleDropdownMenu(e) {
+    e.target.parentElement.classList.toggle("active");
+  }
+
+  // Lifecycle hook for handling scroll event and initial setup
+  onMount(() => {
+    // Event listener for scroll
+    window.addEventListener("scroll", handleStickyHeader);
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener("scroll", handleStickyHeader);
+    };
+  });
+</script>
+
+
  <svelte:head>
 
   <!-- Plugins CSS Files -->
@@ -47,8 +86,7 @@
 <!-- End Top Header  -->
 
 <header
-  class="header bg-quaternary/20 z-50"
-   class:header-fixed-top="{isHeaderFixed}"
+  class="header bg-quaternary/20 z-50" class:header-fixed-top="{isHeaderFixed}"
 >
   <nav class="navbar container relative z-30">
     <a href="/" class="navbar-brand"><b style="font-size:large;">
@@ -66,10 +104,9 @@
     <!-- End Language Switcher -->
 
     <button
-      class="navbar-toggler group relative ml-4" on:click="{toggleNavbarMenu}" class="navbar-toggler"
-      aria-label="navbar toggler"
+      class="navbar-toggler group relative ml-4"
+      aria-label="navbar toggler" on:click="{toggleNavbarMenu}"
     >
-    
       <div
         class="relative flex h-[30px] w-[30px] transform items-center justify-center overflow-hidden rounded-full ring-0 transition-all duration-200"
       >
@@ -111,8 +148,8 @@
         <li class="nav-item">
           <a href="/blog" class="nav-link">Blog</a>
         </li>
-        <li class="nav-item nav-dropdown group" on:click="{toggleDropdownMenu}" class="nav-link"> 
-          <span  class="nav-link inline-flex items-center">
+        <li class="nav-item nav-dropdown group" on:click="{toggleDropdownMenu}">
+          <span class="nav-link inline-flex items-center">
             Pages
             <i class="fa-solid fa-chevron-down arrow-icon"></i>
           </span>
@@ -228,40 +265,10 @@
   <!-- End background lines -->
 </header>
 <!-- End Header -->
-<script>
-  // Reactive variable for tracking header state
-  let isHeaderFixed = false;
 
-  // Function to handle sticky header behavior
-  function handleStickyHeader() {
-    isHeaderFixed = window.pageYOffset > 0;
-  }
 
-  // Function to toggle navbar menu for mobile
-  function toggleNavbarMenu() {
-    const navbarToggler = document.querySelector(".navbar-toggler");
-    const navbarMenu = document.querySelector(".navbar-wrapper");
 
-    if (navbarToggler && navbarMenu) {
-      navbarToggler.classList.toggle("active");
-      navbarMenu.classList.toggle("active");
-    }
-  }
+  
+       
 
-  // Function to handle dropdown menu toggler for mobile
-  function toggleDropdownMenu(e) {
-    e.target.parentElement.classList.toggle("active");
-  }
-
-  // Lifecycle hook for handling scroll event and initial setup
-  onMount(() => {
-    // Event listener for scroll
-    window.addEventListener("scroll", handleStickyHeader);
-
-    // Cleanup function to remove event listener
-    return () => {
-      window.removeEventListener("scroll", handleStickyHeader);
-    };
-  });
-</script>
 
