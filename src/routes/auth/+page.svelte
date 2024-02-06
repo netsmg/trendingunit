@@ -1,6 +1,3 @@
-
-
-
 <script>
   import Icon from '@iconify/svelte';
   import {goto} from '$app/navigation';
@@ -79,21 +76,9 @@
     }
   }
 
-  const handleAuthentication = async (action) => {
-    try {
-      const userCredential = await action(auth, email, password);
-      const user = userCredential.user;
-      console.log(`${isSignIn ? 'Signed in' : 'Signed up'} user:`, user);
-      goto('/blog');
-    } catch (error) {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.error(`${isSignIn ? 'Sign-in' : 'Sign-up'} error (${errorCode}): ${errorMessage}`);
-    }
-  }
-
 </script>
-<!-- Rest of your HTML structure remains unchanged -->
+
+
 <svelte:head>
     <meta charset="utf-8" />
     
