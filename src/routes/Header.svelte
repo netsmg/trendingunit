@@ -54,9 +54,8 @@ import {onMount} from 'svelte';
   <link href="https://demo.themefisher.com/spydea-tailwind/styles/main.css" rel="stylesheet" />
 
 </svelte:head>
-<div
-  class="fixed left-0 top-1/2 z-10 flex h-screen w-full -translate-y-1/2 justify-between"
->
+<div>
+  
   <div class="container flex justify-between">
     <span class="inline-block h-full opacity-50 md:opacity-100"></span>
     <span class="inline-block h-full opacity-50 md:opacity-100"></span>
