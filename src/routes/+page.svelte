@@ -1,192 +1,174 @@
-
-
 <script>
-  import { onMount } from 'svelte';
-  import { fauth } from "../firebase";
-  import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
-  import { goto } from '$app/navigation';
-import toast, { Toaster } from 'svelte-french-toast';
+  import { onDestroy, onMount } from "svelte";
+  import PostList from "../lib/Components/PostList.svelte";
+  import { common } from "../stores/postStore";
+  import PostSkeleton from "../lib/Components/PostSkeleton.svelte";
+  import Landing from "../lib/Components/Landing.svelte";
+import Search from "../lib/Components/Search.svelte";
+  
+  import SectionHead from "../lib/Components/SectionHead.svelte";
+  import {
+    collection,
+    query,
+    orderBy,
+    startAt,
+    endAt,
+    startAfter,
+    endBefore,
+    limit,
+    onSnapshot,
+    updateDoc,
+    doc,
+    increment,
 
-import {userStore} from "../stores/userStore"
-  const auth = getAuth();
-  let email = '';
-  let password = '';
-  let isSignIn = true;
+    getDocs
 
-  onMount(async () => {
-    document.title = "Webui | Home";
-    
-    const saveSettings = () => new Promise((resolve, reject) => {
-      let x = setInterval(() => {
-        if ($userStore.loggedIn === true) {
-          resolve();
-          clearInterval(x);
-        } else if ($userStore.loggedIn === false) {
-          reject();
-          clearInterval(x);
-        }
-      }, 100);
-    });
+  } from "firebase/firestore";
+  import { fstore } from "./firebase";
 
-    toast.promise(
-      saveSettings(),
-      {
-        loading: 'Checking...',
-        success: 'Signed In!',
-        error: 'You are not signed In!',
-      },
+
+
+  let posts = [];
+  let lastVisible;
+  let lim = 20;
+  let postCount = 0;
+
+  const makeData = (docS) => {
+    docS.forEach(doc=>{
+      posts.push({
+          ...doc.data(),
+          mins: $common.getReadTime(doc.data().content),
+          createdAt: $common.getDate(doc.data().createdAt),
+          id: doc.id
+        });
+    })
+
+      posts = posts;
+}
+
+  const  nextData = async(lastVisible, lim) => {
+      posts = [];
+    const q = query(
+      collection(fstore, "posts"),
+      orderBy("createdAt", "desc"),
+      startAfter(lastVisible),
+      limit(lim)
     );
 
-    onAuthStateChanged(fauth, async(user) => {
-      if (user) {
-        userStore.set({ ...user, loggedIn: true });
-        me = user;
-      } else {
-        me = false;
-        console.log('User Not Logged In!');
-        userStore.set({ loggedIn: false });
-      }
-    });
+    postCount++;
+
+    const docS = await getDocs(q);
+    lastVisible = docS.docs[docS.docs.length-1];
+    makeData(docS);
+
+      setTimeout(()=>{
+        MathJax.typeset();
+      }, 500);
+  }
+
+  const  prevData = async(lastVisible, lim) => {
+      posts = [];
+    const q = query(
+      collection(fstore, "posts"),
+      orderBy("createdAt", "desc"),
+      endAt(lastVisible),
+      limit(lim)
+    );
+
+    postCount--;
+
+    const docS = await getDocs(q);
+    lastVisible = docS.docs[docS.docs.length-1];
+    makeData(docS);
+
+      setTimeout(()=>{
+        MathJax.typeset();
+      }, 500);
+  }
+
+
+
+  onMount(async ()=>{
+    document.title = "Webui | Home";
+    document.description = "An authentic blog to share your code";
+    posts = [];
+    const q = query(
+      collection(fstore, "posts"),
+      orderBy("createdAt", "desc"),
+      limit(lim)
+    );
+
+    const docS = await getDocs(q);
+    lastVisible = docS.docs[docS.docs.length-1];
+    makeData(docS);
+
+      setTimeout(()=>{
+        MathJax.typeset();
+      }, 500);
   });
 
-  function handleAuthentication(action) {
-    action(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        console.log(`${isSignIn ? 'Signed in' : 'Signed up'} user:`, user);
-        goto('/blog');
+  const readHandle = async(id, read) => {
+    const postRef = doc(fstore, "posts", id);
+    try{
+      const res = await updateDoc(postRef, {
+        read: increment(1)
       })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.error(`${isSignIn ? 'Sign-in' : 'Sign-up'} error (${errorCode}): ${errorMessage}`);
-      });
+      // console.log(res);
+    } catch(err){
+      console.log(err);
+    }
   }
 
-  function toggleForm() {
-    isSignIn = !isSignIn;
+  const next = () => {
+      if(posts.length>=10){
+        nextData(lastVisible, lim);
+      }
   }
 
-  export let year = new Date().getFullYear();
+  const prev = () => {
+      prevData(lastVisible, lim);
+  }
+ 
 </script>
 
-<!-- Rest of your HTML structure remains unchanged -->
-<head>
-    <meta charset="utf-8" />
-    <title>Log in | Webui</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta content="Responsive Bootstrap 5 Chat App" name="description" />
-    <meta content="Netsmg" name="author" />
-    <!-- App favicon -->
-    
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link href="./css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
-    <link href="./css/icons.min.css" rel="stylesheet" type="text/css" />
-    <!-- App Css-->
-    <link href="./css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-  </head>
-<Toaster/>
-<div class="account-pages my-5 pt-sm-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6 col-xl-5">
-<div class="text-center mb-4">
-              
-              <h4>Sign in</h4>
-              <p class="text-muted mb-4">Sign in to continue to Webui.</p>
-            </div>
-        <div class="p-3">
-          <form>
-            <!-- Email and Password input fields... -->
-            <div class="mb-3">
-              <label class="form-label">Email</label>
-              <div class="input-group bg-light-subtle rounded-3 mb-3">
-                <span class="input-group-text text-muted" id="basic-addon5">
-                  <i class="ri-mail-line"></i>
-                </span>
-                <input
-                  type="email"
-                  class="form-control form-control-lg bg-light-subtle border-light"
-                  placeholder="Enter Email"
-                  aria-label="Enter Email"
-                  aria-describedby="basic-addon5" bind:value={email} required
-                />
-              </div>
-            </div>
+<Landing/>
+<Search/>
 
-            <div class="mb-4">
-              <label class="form-label">Password</label>
-              <div class="input-group bg-light-subtle mb-3 rounded-3">
-                <span class="input-group-text border-light text-muted" id="basic-addon7" >
-                  <i class="ri-lock-2-line"></i>
-                </span>
-                <input
-                  type="password"
-                  class="form-control form-control-lg bg-light-subtle border-light"
-                  placeholder="Enter Password"
-                  aria-label="Enter Password"
-                  aria-describedby="basic-addon7" bind:value={password} required
-                />
-              </div>
-            </div>
-
-            {#if isSignIn}
-              <!-- Sign-in form -->
-              <div class="d-grid">
-                <button class="btn btn-primary waves-effect waves-light" type="submit" on:click={() => handleAuthentication(signInWithEmailAndPassword)}>
-                  Sign in
-                </button>
-              </div>
-            {:else}
-              <!-- Sign-up form -->
-              <div class="d-grid">
-                <button class="btn btn-primary waves-effect waves-light" type="submit" on:click={() => handleAuthentication(createUserWithEmailAndPassword)}>
-                  Sign up
-                </button>
-              </div>
-            {/if}
-
-            <!-- Toggle between Sign-in and Sign-up forms -->
-            <div class="text-center mt-3">
-              <button type="button" class="btn btn-link text-muted" on:click={toggleForm}>
-                {#if isSignIn}
-                  <div class="mt-5 text-center">
-                    Don't have an account? Sign up
-                    <p>&copy; {year} Webui. </p>
-                  </div>
-                {:else}
- 
-                      
-                  <div class="mt-5 text-center">
-<p class="text-muted mb-0">
-                        By registering you agree to the Webui
-                        <a href="/" class="text-primary">
-                          Terms of Use
-                        </a>
-                      </p>
-                    <p>
-                      Already have an account? Login
-                    </p>
-                    <p>&copy; {year} Webui. </p>
-                  </div>
-                {/if}
-              </button>
-            </div>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </div>
+<div class="absolute z-[-1] lg:left-[0] lg:top-[10px] top-[50px] md:top-10 md:left-[250px]">
+  
 </div>
 
 
+{#if posts.length > 0}
+<SectionHead title="Most Recent"/>
+  {#each posts as post, index}
+    <a href="/blog/{post.id}">
+      <PostList
+      on:click={()=> readHandle(post.id, post.read)}
+        read={post.read}
+        commentCount = {post.comment}
+        author={post.author}
+        title={post.title}
+        express={post.express}
+        tags={post.tags}
+        createdAt={post.createdAt}
+        mins={post.mins}
+        avatar="https://codebuckblog.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLogo.e0b9e0a0.png&w=128&q=75"
+      />
+    </a>
+  {/each}
+  <div class="flex items-center justify-center gap-5">
+    {#if postCount!=0}
+    <button on:click={()=> prev()} class="btn variant-filled-primary">Previous</button>
+    {/if}
 
-
-   
-
-
+    {#if posts.length>9}
+    <button on:click={()=> next()} class="btn variant-filled-primary">Next</button>
+    {/if}
+  </div>
+{:else}
+  <PostSkeleton />
+  <PostSkeleton />
+  <PostSkeleton />
+  <PostSkeleton />
+{/if}
