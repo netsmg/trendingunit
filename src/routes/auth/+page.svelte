@@ -4,9 +4,9 @@
   import {ref, update} from "firebase/database";
   import { onMount } from 'svelte';
   import {onAuthStateChanged, signOut, signInWithPopup, GoogleAuthProvider, getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} from 'firebase/auth';
-  
+  import { fauth, db } from "../../firebase";
   import toast, { Toaster } from 'svelte-french-toast';
-  import { postStore } from '../../stores/postStore';
+  import { userStore } from '../../stores/userStore';
   
   const auth = getAuth();
   let email = '';
