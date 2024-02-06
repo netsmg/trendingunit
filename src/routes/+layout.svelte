@@ -4,6 +4,7 @@
   import {onAuthStateChanged, signOut} from 'firebase/auth'
   import { fauth } from "../firebase";
   import {onMount} from 'svelte';
+import Header form "./Header.svelte";
   import {userStore} from "../stores/userStore"
   import toast, { Toaster } from 'svelte-french-toast';
   
@@ -55,6 +56,7 @@ onMount(async () => {
 />
 
 </svelte:head>
+<Header/>
 <slot />
 
 
