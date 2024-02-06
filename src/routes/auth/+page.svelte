@@ -6,8 +6,8 @@
   import {onAuthStateChanged, signOut, signInWithPopup, GoogleAuthProvider, getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} from 'firebase/auth';
   import { fauth, db } from "../../firebase";
   import toast, { Toaster } from 'svelte-french-toast';
-  import {userStore} from "../stores/userStore"
-
+  import { postStore } from '../../stores/postStore';
+  
   const auth = getAuth();
   let email = '';
   let password = '';
