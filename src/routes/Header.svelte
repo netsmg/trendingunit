@@ -55,7 +55,7 @@ import {onMount} from 'svelte';
 
 </svelte:head>
 <div
-  class="line-bg fixed left-0 top-1/2 z-10 flex h-screen w-full -translate-y-1/2 justify-between"
+  class="fixed left-0 top-1/2 z-10 flex h-screen w-full -translate-y-1/2 justify-between"
 >
   <div class="container flex justify-between">
     <span class="inline-block h-full opacity-50 md:opacity-100"></span>
@@ -240,7 +240,7 @@ import {onMount} from 'svelte';
   <!-- End Main Header  -->
 
   <div
-    class="line-bg  absolute z-20"
+    class="absolute z-20"
   >
     <div class="container flex justify-between">
       <span
