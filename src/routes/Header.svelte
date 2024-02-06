@@ -1,6 +1,7 @@
+
+<script>
 import {onMount} from 'svelte';
  
-<script>
   // Reactive variable for tracking header state
   let isHeaderFixed = false;
 
